@@ -28,7 +28,7 @@ namespace Math {
     template <typename T, int N>
     struct VectorStorage {
         T Elements[N];
-        };
+    };
     
     template <typename T>
     struct VectorStorage<T, 2> {
@@ -41,9 +41,9 @@ namespace Math {
         
         VectorStorage() = default;
         VectorStorage(T xy)
-        : VectorStorage(xy, xy) {}
+            : VectorStorage(xy, xy) {}
         VectorStorage(T x, T y)
-        : X(x), Y(y) {}
+            : X(x), Y(y) {}
     };
 
     template <typename T>
@@ -57,9 +57,9 @@ namespace Math {
         
         VectorStorage() = default;
         VectorStorage(T xyz)
-        : VectorStorage(xyz, xyz, xyz) {}
+            : VectorStorage(xyz, xyz, xyz) {}
         VectorStorage(T x, T y, T z)
-        : X(x), Y(y), Z(z) {}
+            : X(x), Y(y), Z(z) {}
     };
 
     template <typename T>
@@ -73,13 +73,13 @@ namespace Math {
         
         VectorStorage() = default;
         VectorStorage(T xyz)
-        : VectorStorage(xyz, xyz, xyz, static_cast<T>(1.0)) {}
+            : VectorStorage(xyz, xyz, xyz, static_cast<T>(1.0)) {}
         VectorStorage(T xyz, T w)
-        : VectorStorage(xyz, xyz, xyz, w) {}
+            : VectorStorage(xyz, xyz, xyz, w) {}
         VectorStorage(T x, T y, T z)
-        : VectorStorage(x, y, z, static_cast<T>(1.0)) {}
+            : VectorStorage(x, y, z, static_cast<T>(1.0)) {}
         VectorStorage(T x, T y, T z, T w)
-        : X(x), Y(y), Z(z), W(w) {}
+            : X(x), Y(y), Z(z), W(w) {}
     };
 
     template <typename T, int N>
@@ -90,7 +90,7 @@ namespace Math {
         Vector() = default;
         
         Vector(const Vector& other)
-        : VectorStorage(other) {}
+            : VectorStorage(other) {}
 
         /* Scalar arithmetic operators */
         
@@ -239,7 +239,7 @@ namespace Math {
                     Elements[i][j] = (i == j)
                         ? scalar
                         : static_cast<T>(0.0);
-            }
+        }
                     
         /* Scalar arithmetic operators */
         
@@ -376,7 +376,7 @@ namespace Math {
     struct Matrix4x4 : Matrix<float, 4, 4> {
         Matrix4x4() = default;
         Matrix4x4(float scalar)
-        : MatrixType(scalar) {}
+            : MatrixType(scalar) {}
         
         Matrix4x4(Vector4 v0, Vector4 v1, Vector4 v2, Vector4 v3) {
             Elements[0] = v0;
@@ -386,7 +386,7 @@ namespace Math {
         }
         
         Matrix4x4(const MatrixType& m)
-        : MatrixType(m) {}
+            : MatrixType(m) {}
         
     };
 
